@@ -1,12 +1,16 @@
 
-public class gestorDaConda extends funcionario {
-    private int idGestorDaConta;
+public class GestorDaConda extends Funcionario implements Serializable {
+	private static long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue
+    private long idGestorDaConta;
 
-	public int getIdGestorDaConta() {
+	public long getIdGestorDaConta() {
 		return idGestorDaConta;
 	}
 
-	public void setIdGestorDaConta(int idGestorDaConta) {
+	public void setIdGestorDaConta(long idGestorDaConta) {
 		this.idGestorDaConta = idGestorDaConta;
 	}	
 

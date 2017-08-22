@@ -1,15 +1,20 @@
-public class empresa {
-    private int idEmpresa;
+@Entity
+public class Empresa implements Serializable {
+	private static long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue
+	private long idEmpresa;
     private String nome;
     private String documento;
     private String endereco;
     private int status;
     
     
-	public int getIdEmpresa() {
+	public long getIdEmpresa() {
 		return idEmpresa;
 	}
-	public void setIdEmpresa(int idEmpresa) {
+	public void setIdEmpresa(long idEmpresa) {
 		this.idEmpresa = idEmpresa;
 	}
 	public String getNome() {

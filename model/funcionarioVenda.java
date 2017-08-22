@@ -1,12 +1,16 @@
 
-public class funcionarioVenda extends funcionario {
-    private int idFuncionarioVenda;
+public class FuncionarioVenda extends Funcionario implements Serializable {
+	private static long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue
+    private long idFuncionarioVenda;
 
-	public int getIdFuncionarioVenda() {
+	public long getIdFuncionarioVenda() {
 		return idFuncionarioVenda;
 	}
 
-	public void setIdFuncionarioVenda(int idFuncionarioVenda) {
+	public void setIdFuncionarioVenda(long idFuncionarioVenda) {
 		this.idFuncionarioVenda = idFuncionarioVenda;
 	}
 }

@@ -1,7 +1,12 @@
 import java.util.GregorianCalendar;
 
-public class produtoUni extends produto{
-	private int idProdutoUni;
+@Entity
+public class ProdutoUni extends Produto implements Serializable {
+	private static long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue
+	private long idProdutoUni;
 	private GregorianCalendar fabricacao = new GregorianCalendar();
 	private GregorianCalendar validade = new GregorianCalendar();
 	private GregorianCalendar DataChegadaEstoque = new GregorianCalendar();
@@ -9,10 +14,10 @@ public class produtoUni extends produto{
     private int quantidadeEstoque;
     private String notaFiscal;
     
-	public int getIdProdutoUni() {
+	public long getIdProdutoUni() {
 		return idProdutoUni;
 	}
-	public void setIdProdutoUni(int idProdutoUni) {
+	public void setIdProdutoUni(long idProdutoUni) {
 		this.idProdutoUni = idProdutoUni;
 	}
 	public GregorianCalendar getFabricacao() {

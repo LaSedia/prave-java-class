@@ -1,14 +1,18 @@
-
-public class cliente {
-	private int idCliente;
+@Entity
+public class Cliente implements Serializable {
+	private static long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue
+	private long idCliente;
     private String nome;
     private String email;
     
     
-    public int getIdCliente() {
+    public long getIdCliente() {
 		return idCliente;
 	}
-	public void setIdCliente(int idCliente) {
+	public void setIdCliente(long idCliente) {
 		this.idCliente = idCliente;
 	}
 	public String getNome() {

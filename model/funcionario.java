@@ -1,16 +1,20 @@
-
-public class funcionario {
-    private int idFuncionario;
+@Entity
+public class Funcionario implements Serializable {
+	private static long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue
+    private long idFuncionario;
     private String nome;
     private String email;
     private String senha;
     private String documento;
     private int status;
     
-	public int getIdFuncionario() {
+	public long getIdFuncionario() {
 		return idFuncionario;
 	}
-	public void setIdFuncionario(int idFuncionario) {
+	public void setIdFuncionario(long idFuncionario) {
 		this.idFuncionario = idFuncionario;
 	}
 	public String getNome() {

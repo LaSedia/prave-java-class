@@ -1,16 +1,20 @@
-
-public class fornecedor {
-    private int idFornecedor;
+@Entity
+public class Fornecedor implements Serializable {
+	private static long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue
+	private long idFornecedor;
     private String nome;
     private String email;
     private String endereco;
     private String documento;
     private int status;
     
-	public int getIdFornecedor() {
+	public long getIdFornecedor() {
 		return idFornecedor;
 	}
-	public void setIdFornecedor(int idFornecedor) {
+	public void setIdFornecedor(long idFornecedor) {
 		this.idFornecedor = idFornecedor;
 	}
 	public String getNome() {

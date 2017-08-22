@@ -1,14 +1,19 @@
 import java.util.GregorianCalendar;
 
-public class compra {
-	private int idCompra;
+@Entity
+public class Compra implements Serializable {
+	private static long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue
+	private long idCompra;
 	private GregorianCalendar dataCompra = new GregorianCalendar();
     private int status;
     
-	public int getIdCompra() {
+	public long getIdCompra() {
 		return idCompra;
 	}
-	public void setIdCompra(int idCompra) {
+	public void setIdCompra(long idCompra) {
 		this.idCompra = idCompra;
 	}
 	public GregorianCalendar getDataCompra() {

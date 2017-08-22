@@ -1,12 +1,16 @@
-
-public class fabricante {
-	private int idFabricante;
+@Entity
+public class Fabricante implements Serializable {
+	private static long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue
+	private long idFabricante;
     private String nome;
     
-    public int getIdFabricante() {
+    public long getIdFabricante() {
 		return idFabricante;
 	}
-	public void setIdFabricante(int idFabricante) {
+	public void setIdFabricante(long idFabricante) {
 		this.idFabricante = idFabricante;
 	}
 	public String getNome() {

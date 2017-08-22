@@ -1,6 +1,10 @@
-
-public class produto {
-    private int idProduto;
+@Entity
+public class Produto implements Serializable {
+	private static long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue
+    private long idProduto;
     private String nome;
     private String descricao;
     private String cor;
@@ -13,10 +17,10 @@ public class produto {
     private int status;
     private String tamanho;
     
-	public int getIdProduto() {
+	public long getIdProduto() {
 		return idProduto;
 	}
-	public void setIdProduto(int idProduto) {
+	public void setIdProduto(long idProduto) {
 		this.idProduto = idProduto;
 	}
 	public String getNome() {

@@ -1,13 +1,17 @@
-
-public class itemVenda {
-	private int idItemVenda;
+@Entity
+public class ItemVenda implements Serializable {
+	private static long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue
+	private long idItemVenda;
 	private int quantidade;
 	private float preco;
 	
-	public int getIdItemVenda() {
+	public long getIdItemVenda() {
 		return idItemVenda;
 	}
-	public void setIdItemVenda(int idItemVenda) {
+	public void setIdItemVenda(long idItemVenda) {
 		this.idItemVenda = idItemVenda;
 	}
 	public int getQuantidade() {
